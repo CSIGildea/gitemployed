@@ -7,6 +7,6 @@
 github_login = {
     'username' : 'YOUR_USERNAME',
     'password' : 'YOUR_PASSWORD',
-    'personal_access_token' : 'YOUR_PERSONAL_ACCESS_TOKEN'
+    'personal_access_token' : 'TEST'
 }
 
