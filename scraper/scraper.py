@@ -43,13 +43,19 @@ def main():
     username = credentials.github_login['username']
     password = credentials.github_login['password']
     personal_access_token = credentials.github_login['personal_access_token']
-
+    print("Authenticating Login Details inside credentials.py...")
     git_ac = auth_github_account(username,password,personal_access_token)
 
     if(git_ac!=None):
-        user = git_ac.get_user("torvalds")
+        print("Authentication Passed")
+        user = git_ac.get_user("csigildea")
         for repo in user.get_repos():
             print(repo.name)
-
+        print(user.get_followers())
+        followers = user.get_followers()
+        count = 0
+        for follower in followers:
+            print(str(count) + str(follower))
+            count = count +1
 if __name__ == "__main__":
     main()
