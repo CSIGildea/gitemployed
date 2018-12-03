@@ -17,9 +17,10 @@ Predict how many stars a future worker should have based on the langauge they co
     <img src="https://raw.githubusercontent.com/CSIGildea/gitemployed/master/pictures/about.png?token=AYSfNXge5DE_SYN-ncOd86JYDwAQNe4Eks5cDgn7wA%3D%3D"/>
   About Page
 </p>
-# What I'm Happy About
+
+# Overall Opinions
 - Got to learn a lot more about React.
-- Built my first SPA.
+- Built my first SPA(SPA is very slick).
 - Happy to get to do some Machine Learning with Tensorflow (even just a multiple variable linear regression model) at college.
 - Happy the models actually turned out fairly realistical.
 - Also happy the models didn't tell me I was a terrible programmer...(or maybe I just didn't train it well enough so it couldn't :( ).
