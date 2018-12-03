@@ -1,7 +1,11 @@
 # GitEmployed
-Predict how many stars a future worker should have based on the langauge they code in, the size of their repos, the quantity of followers and the quantity of following.
+Predict how many stars a github user should have based on the langauge they code in, the size of their repos, the quantity of followers and the quantity they are following.
 
-- I do play on hosting this soon, but with Christmas Exams and other matters before Christmas, it will probably be after Christmas when it gets deployed.
+Stars aren't going to be totally accurate, this isn't trying to enforce that.
+
+It is an example of a metric that can be used to rank a set of people applying for a job, so that maybe if two people are of equal academic background, you would select the one who performs the best in comparison to the rest of the github community, rather than the one github non-active potential hire.
+
+- I do plan on hosting this soon, but with Christmas Exams and other matters before Christmas, it will probably be after Christmas when it gets deployed.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/CSIGildea/gitemployed/master/pictures/homepage.png?token=AYSfNTMqSDcp4_3NYDZEwkiBYId0kbrQks5cDgiswA%3D%3D"/>
@@ -23,7 +27,7 @@ Predict how many stars a future worker should have based on the langauge they co
 - Built my first SPA(SPA is very slick).
 - Happy to get to do some Machine Learning with Tensorflow (even just a multiple variable linear regression model) at college.
 - Happy the models actually turned out fairly realistical.
-- Also happy the models didn't tell me I was a terrible programmer...(or maybe I just didn't train it well enough so it couldn't :( ).
+- Also happy the models didn't tell me I was a terrible programmer...or maybe I just didn't train it well enough so it couldn't :'(
 
 # To Install
 - run the ./install.sh
@@ -34,4 +38,4 @@ Predict how many stars a future worker should have based on the langauge they co
 - Edit the token.json file in the react folder and add in your personal access token for github.
 - Then just do "npm run dev"
 
-- Enjoy your github adventure (the models seem fairly alright, as long as you aren't a ruby developer...it looks like you have high expectations)
+- Enjoy your github adventure (the models seem fairly alright, as long as you aren't a ruby developer...it looks like you have high expectations) Have fun, hope you enjoy!
