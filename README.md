@@ -17,3 +17,10 @@ Predict how many stars a future worker should have based on the langauge they co
     <img src="https://raw.githubusercontent.com/CSIGildea/gitemployed/master/pictures/about.png?token=AYSfNXge5DE_SYN-ncOd86JYDwAQNe4Eks5cDgn7wA%3D%3D"/>
   About Page
 </p>
+
+# To Install
+- run the ./install.sh
+- After you have your virtual env ready to go with all modules, then just go to scraper folder, add your credentials to the credentials.py, then run scraperpy(outputting the csv of the sample data), can also run linearregression.py afterwards to train a model and output the json.
+
+- Go run the frontend and the frontend api, go the react folder. "npm i" to install all packages.
+- Then just do "npm run dev"
