@@ -27,6 +27,9 @@ It is an example of a metric that can be used to rank a set of people applying f
 - Built my first SPA(SPA is very slick).
 - Happy to get to do some Machine Learning with Tensorflow (even just a multiple variable linear regression model) at college.
 - Happy the models actually turned out fairly realistical.
+- Had to experience being at the mercy of github's api limits. Please read my about section in the above screenshot to see how I tried to repesent 31+ million repos, with a 1000 search results cap. I ended up having to totally ignore other github libraries and instead opt for specific requests that gave me greater control and were easier to use. 
+
+- I also used inferential statistics for getting the sample of repositories for each language and also took into account appropriate star distribution. All this helped the quickly trained linear regression model become quite accurate for the amount of data and the timeframe.
 - Also happy the models didn't tell me I was a terrible programmer...or maybe I just didn't train it well enough so it couldn't :'(
 
 # To Install
