@@ -17,10 +17,20 @@ Predict how many stars a future worker should have based on the langauge they co
     <img src="https://raw.githubusercontent.com/CSIGildea/gitemployed/master/pictures/about.png?token=AYSfNXge5DE_SYN-ncOd86JYDwAQNe4Eks5cDgn7wA%3D%3D"/>
   About Page
 </p>
+# What I'm Happy About
+- Got to learn a lot more about React.
+- Built my first SPA.
+- Happy to get to do some Machine Learning with Tensorflow (even just a multiple variable linear regression model) at college.
+- Happy the models actually turned out fairly realistical.
+- Also happy the models didn't tell me I was a terrible programmer...(or maybe I just didn't train it well enough so it couldn't :( ).
 
 # To Install
 - run the ./install.sh
-- After you have your virtual env ready to go with all modules, then just go to scraper folder, add your credentials to the credentials.py, then run scraperpy(outputting the csv of the sample data), can also run linearregression.py afterwards to train a model and output the json.
+- After you have your virtual env ready to go with all modules, then just go to scraper folder, add your credentials to the credentials.py(enter either username and password OR personal access token).
+- Then run scraper.py(outputting the csv of the sample data), can also run linearregression.py afterwards to train a model and output the json.
 
-- Go run the frontend and the frontend api, go the react folder. "npm i" to install all packages.
+- Go the react folder. "npm i" to install all packages.
+- Edit the token.json file in the react folder and add in your personal access token for github.
 - Then just do "npm run dev"
+
+- Enjoy your github adventure (the models seem fairly alright, as long as you aren't a ruby developer...it looks like you have high expectations)
