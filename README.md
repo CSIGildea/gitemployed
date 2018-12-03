@@ -32,6 +32,14 @@ It is an example of a metric that can be used to rank a set of people applying f
 - I also used inferential statistics for getting the sample of repositories for each language and also took into account appropriate star distribution. All this helped the quickly trained linear regression model become quite accurate for the amount of data and the timeframe.
 - Also happy the models didn't tell me I was a terrible programmer...or maybe I just didn't train it well enough so it couldn't :'(
 
+# Awesome Resources that helped me build this:
+React - Single Page Application Resources
+- https://www.youtube.com/watch?v=v0t42xBIYIs
+- https://www.youtube.com/watch?v=1iAG6h9ff5s
+
+Tensorflow Linear Regression Model
+- https://www.youtube.com/watch?v=23aqYP3jfwU
+
 # To Install
 - run the ./install.sh
 - After you have your virtual env ready to go with all modules, then just go to scraper folder, add your credentials to the credentials.py(enter either username and password OR personal access token).
