@@ -74,21 +74,29 @@ class User extends Component {
                {userInfos.map(userInfo =>
                 <Bar
                  data={{
-        labels: ["Actual Stars", "Expected Stars"],
-        datasets:[
-          {
-            label:'Stars',
-            data:[ userInfo.statistics.received_stars,userInfo.statistics.expected_stars],
-            backgroundColor:[
-              'rgba(255, 99, 132, 0.6)',
-              'rgba(54, 162, 235, 0.6)',
-              'rgba(255, 206, 86, 0.6)',
-              'rgba(75, 192, 192, 0.6)',
-            ]
-          }
-        ]
-      }}
-                options={{
+                    labels: ["Actual Stars", "Expected Stars"],
+                    datasets:[
+                    {
+                      label:'Stars',
+                      data:[ userInfo.statistics.received_stars,userInfo.statistics.expected_stars],
+                      backgroundColor:[
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(75, 192, 192, 0.6)',
+                      ]
+                    }
+                ]
+                }}
+                var options = {{
+                  scales: {
+                    yAxes: [{
+                      ticks: {
+                      beginAtZero: true,
+                      min: 0
+                    }    
+                  }]
+                  },
                 title:{
                       display:true,
                       text:'Actual Stars Vs Linear Regression Predicted Stars',
