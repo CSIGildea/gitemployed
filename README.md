@@ -18,6 +18,10 @@ It is an example of a metric that can be used to rank a set of people applying f
   Some Sample Predictions the Model Returned
   <img src="https://raw.githubusercontent.com/CSIGildea/gitemployed/master/pictures/api.png?token=AYSfNVkFnmJD5r3oyMlmSovmi2G6lOUdks5cDgnLwA%3D%3D"/>
   API that serves the React Frontend
+    <img src="https://raw.githubusercontent.com/CSIGildea/gitemployed/master/pictures/Screenshot%20from%202018-12-03%2007-13-37.png"/>
+  Fetch Request in Process - SPA in Action
+ <img src="https://raw.githubusercontent.com/CSIGildea/gitemployed/master/pictures/followers.png"/>
+  Also has clickable links to all your followers and who you are following (up to 100) so you can go through your followers/who you are following easily and see how popular their code is.
     <img src="https://raw.githubusercontent.com/CSIGildea/gitemployed/master/pictures/about.png?token=AYSfNXge5DE_SYN-ncOd86JYDwAQNe4Eks5cDgn7wA%3D%3D"/>
   About Page
 </p>
@@ -31,6 +35,7 @@ It is an example of a metric that can be used to rank a set of people applying f
 
 - I also used inferential statistics for getting the sample of repositories for each language and also took into account appropriate star distribution. All this helped the quickly trained linear regression model become quite accurate for the amount of data and the timeframe.
 - Also happy the models didn't tell me I was a terrible programmer...or maybe I just didn't train it well enough so it couldn't :'(
+(Update - After making this repo public because it is so big the model now believes I am performing 15% worse than it expects me to be. This is due to the repo being newly made public and having no stars xD)
 
 # Awesome Resources that helped me build this:
 React - Single Page Application Resources
