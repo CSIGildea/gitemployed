@@ -15,7 +15,7 @@ from tensorflow import keras
 # Takes username,password and token and tries to give back an authenticated github account
 # With whichever of those details are correct
 
-PRIMARY_LANGUAGES = ["JavaScript", "Python", "Java", "Ruby","PHP", "C++", "CSS", "C#", "Go", "C", "TypeScript","Shell","Swift","Scala","Objective-C"]
+PRIMARY_LANGUAGES = ["JavaScript", "Python", "Java", "Ruby","PHP", "C++", "CSS","Go", "C", "TypeScript","Shell","Swift","Scala","Objective-C"]
 
 TIME_STARTED = time.time()
 def auth_github_account(username,password,token):
@@ -151,17 +151,20 @@ def append_bias_reshape(features,labels):
     l = np.reshape(labels,[n_training_samples,1])
     return f, l
 
-def create_model(df):
+def create_model(df,language):
+    print("training")
+# Later, launch the model, initialize the variables, do some work, save the
+# variables to disk.
     features = df.as_matrix()
-    labels = numpy.array(['Followers', 'Following', 'Bytes of Code', 'Seconds Since Creation','Stars'])
-    n_dim = f.shape[1]
+    labels = np.array(['Followers', 'Following', 'Bytes of Code', 'Seconds Since Creation','Stars'])
+    n_dim = features.shape[1]
 
-    rnd_indices = np.random.rand(len(f)) < 0.80
+    rnd_indices = np.random.rand(len(features)) < 0.80
 
-    train_x = f[rnd_indices]
-    train_y = l[rnd_indices]
-    test_x = f[~rnd_indices]
-    test_y = l[~rnd_indices]
+    train_x = features[rnd_indices]
+    train_y = labels[rnd_indices]
+    test_x = features[~rnd_indices]
+    test_y = labels[~rnd_indices]
 
     learning_rate = 0.01
     training_epochs = 1000
@@ -177,6 +180,8 @@ def create_model(df):
     cost = tf.reduce_mean(tf.square(y_ - Y))
     training_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost)
 
+  # Do some work with the model.
+  # Save the variables to disk.
 
     sess = tf.Session()
     sess.run(init)
@@ -184,6 +189,9 @@ def create_model(df):
     for epoch in range(training_epochs):
         sess.run(training_step,feed_dict={X:train_x,Y:train_y})
         cost_history = np.append(cost_history,sess.run(cost,feed_dict={X: train_x,Y: train_y}))
+
+    save_path = saver.save(sess, "/"+language+".ckpt")
+    print("Model saved in file: %s" % save_path)
 
 
 # Bytes of Code, Amount of Follwers, Amount Following, Days since creation,
@@ -200,7 +208,9 @@ def get_all_repo_information(repo_names,git_ac,language):
         following = user.following
         number_of_stars = repo.stargazers_count
         df.loc[index] = [followers,following,size,seconds_since_creation,number_of_stars]
+        print("Index "+str(index)+" Followers")
     print(df)
+    df.to_csv(str(language)+"_Data.csv", encoding='utf-8', index=False)
     return df
 
 
@@ -237,7 +247,7 @@ def main():
     for nextlanguage in PRIMARY_LANGUAGES:
         print(nextlanguage)
         sample_repos = get_sample_for_language(nextlanguage,sample_size_of_repositories[nextlanguage],interval_between_repositories[nextlanguage],personal_access_token)     
-        get_all_repo_information(sample_repos,git_ac,nextlanguage)
+        dataframe = get_all_repo_information(sample_repos,git_ac,nextlanguage)
 
 
     if(git_ac!=None):
